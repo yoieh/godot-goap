@@ -18,6 +18,9 @@ margin_bottom = -4.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 200.0
@@ -31,6 +34,7 @@ margin_bottom = 16.0
 margin_right = 16.0
 margin_bottom = 16.0
 size_flags_vertical = 4
+disabled = true
 texture_normal = ExtResource( 2 )
 texture_disabled = ExtResource( 3 )
 
@@ -100,6 +104,7 @@ texture = ExtResource( 7 )
 [node name="Effect" parent="grid" instance=ExtResource( 6 )]
 margin_left = 546.0
 margin_right = 1059.0
+
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/NewAction" to="." method="add_action"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/DeleteAction" to="." method="delete_current_action"]
 [connection signal="gui_input" from="VBoxContainer/ActionList" to="." method="on_action_list_gui_input"]
